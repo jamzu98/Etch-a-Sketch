@@ -3,6 +3,7 @@ const mySlider = document.querySelector('.slider');
 const gridSizeSpan = document.querySelector('.gridSizeSpan');
 const blackButton = document.querySelector('.blackButton');
 const randomButton = document.querySelector('.randomButton');
+const copyrightYear = document.querySelector('.copyrightYear');
 
 let colorMode = 0;
 
@@ -48,6 +49,8 @@ mySlider.oninput = function() {
 mySlider.onchange = function() {
     getGridSize();
 }
+
+copyrightYear.textContent = new Date().getFullYear();
 
 function startApp() {
     drawGrid (16,16);
